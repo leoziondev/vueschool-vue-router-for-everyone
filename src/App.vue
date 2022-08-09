@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav-header">
       <h1>Vue<span>Travel</span></h1>
-      <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/brazil">Brazil</router-link>
-        <router-link to="/hawaii">Hawaii</router-link>
-        <router-link to="/jamaica">Jamaica</router-link>
-        <router-link to="/panama">Panama</router-link>
-      </nav>
+      <TheNavigation />
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import TheNavigation from "@/components/TheNavigation";
+
+export default {
+  components: {
+    TheNavigation,
+  },
+};
+</script>
 
 <style>
 * {
@@ -28,8 +31,7 @@ a {
   text-decoration: none;
   color: #2c3e50;
 }
-a:hover,
-#nav a:hover {
+a:hover {
   color: #42b983;
 }
 #app {
@@ -40,7 +42,7 @@ a:hover,
   color: #2c3e50;
 }
 
-#nav {
+#nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,21 +51,11 @@ a:hover,
   background: white;
 }
 
-#nav h1 {
+#nav-header h1 {
   font-size: 1.6rem;
 }
 
-#nav h1 span {
-  color: #42b983;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  padding: 0 10px;
-}
-
-#nav a.router-link-exact-active {
+#nav-header h1 span {
   color: #42b983;
 }
 </style>
