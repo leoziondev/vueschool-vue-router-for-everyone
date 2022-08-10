@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav-header">
-      <h1>Vue<span>Travel</span></h1>
-      <TheNavigation />
-    </div>
-    <router-view />
+    <TheNavigation />
+    <router-view :key="$route.path" />
   </div>
 </template>
 
@@ -40,22 +37,5 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 30px;
-  background: white;
-}
-
-#nav-header h1 {
-  font-size: 1.6rem;
-}
-
-#nav-header h1 span {
-  color: #42b983;
 }
 </style>
