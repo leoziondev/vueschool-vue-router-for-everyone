@@ -47,6 +47,13 @@ const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: "/invoices",
+    name: "invoices",
+    component: () =>
+      import(/* webpackChunckName: "Invoices" */ "../views/Invoices"),
+    meta: { requiresAuth: true },
+  },
+  {
     path: "/login",
     name: "login",
     component: () => import(/* webpackChunckName: "Login" */ "../views/Login"),
@@ -87,6 +94,7 @@ router.beforeEach((to, from, next) => {
     if (!store.user) {
       next({
         name: "login",
+        query: { redirect: to.fullPath },
       });
     } else {
       next();
