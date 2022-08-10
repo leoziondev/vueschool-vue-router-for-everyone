@@ -87,7 +87,10 @@ export default {
 
   padding: 30px;
   background: white;
-  position: relative;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 #nav-header .mobile-menu {

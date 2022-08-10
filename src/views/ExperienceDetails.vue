@@ -47,6 +47,7 @@ export default {
 <style scoped>
 .experience-container {
   margin-top: 50px;
+  margin-bottom: 150px;
 }
 .experience {
   width: 100%;
