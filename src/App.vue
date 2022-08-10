@@ -90,4 +90,26 @@ a:hover {
 .fade-leave-to {
   opacity: 0;
 }
+
+.input {
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.btn {
+  background: #42b983;
+  color: white;
+  padding: 10px;
+  border: 0;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
 </style>

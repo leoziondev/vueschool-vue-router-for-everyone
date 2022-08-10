@@ -36,7 +36,11 @@
             {{ destination.name }}
           </router-link>
         </li>
+        <li class="nav-link-item">
+          <router-link to="/user"> Dashboard </router-link>
+        </li>
       </ul>
+
       <ul class="nav-links-mobile" v-if="isVisible">
         <li class="nav-link-item" @click="showMenu">
           <router-link to="/">Home</router-link>
@@ -56,6 +60,9 @@
             {{ destination.name }}
           </router-link>
         </li>
+        <li class="nav-link-item">
+          <router-link to="/user" @click="showMenu"> Dashboard </router-link>
+        </li>
       </ul>
     </nav>
   </div>
@@ -68,7 +75,7 @@ export default {
   data() {
     return {
       destinations: store.destinations,
-      isVisible: true,
+      isVisible: false,
     };
   },
   methods: {
