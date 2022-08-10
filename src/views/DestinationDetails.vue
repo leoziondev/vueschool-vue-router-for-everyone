@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <GoBack />
     <section class="destination">
       <div class="destination-cover">
         <img
@@ -43,8 +44,12 @@
 
 <script>
 import store from "@/store.js";
+import GoBack from "@/components/GoBack";
 
 export default {
+  components: {
+    GoBack,
+  },
   data() {
     return {};
   },
@@ -69,6 +74,7 @@ export default {
   width: 100%;
   max-width: 1400px;
   margin: 50px auto;
+  position: relative;
 }
 
 .destination {
