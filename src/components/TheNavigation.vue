@@ -60,8 +60,8 @@
             {{ destination.name }}
           </router-link>
         </li>
-        <li class="nav-link-item">
-          <router-link to="/user" @click="showMenu"> Dashboard </router-link>
+        <li class="nav-link-item" @click="showMenu">
+          <router-link to="/user"> Dashboard </router-link>
         </li>
       </ul>
     </nav>
